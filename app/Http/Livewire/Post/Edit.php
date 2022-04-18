@@ -23,8 +23,8 @@ class Edit extends Component
 
     public function update(){
         $this->validate([
-            'title' => 'required',
-            'content' => 'required',
+            'title' => 'required|min:6',
+            'content' => 'required|min:25',
         ]);
 
         if ($this->postId) {
@@ -45,5 +45,13 @@ class Edit extends Component
     public function render()
     {
         return view('livewire.post.edit');
+    }
+
+     public function updated($field)
+    {
+        $this->validateOnly($field, [
+            'title'   => 'required|min:6',
+            'content' => 'required|min:25',
+        ]);
     }
 }

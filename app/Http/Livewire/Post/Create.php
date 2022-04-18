@@ -10,10 +10,18 @@ class Create extends Component
     public $title;
     public $content;
 
+     public function updated($field)
+    {
+        $this->validateOnly($field, [
+            'title'   => 'required|min:6',
+            'content' => 'required|min:25',
+        ]);
+    }
+    
     public function store(){
         $this->validate([
-            'title' => 'required',
-            'content' => 'required',
+            'title' => 'required|min:6',
+            'content' => 'required|min:25',
         ]);
         $post = Post::create([
             'title' => $this->title,
