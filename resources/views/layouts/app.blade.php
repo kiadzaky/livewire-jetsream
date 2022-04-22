@@ -34,7 +34,9 @@
     </div>
 
     <!-- javascript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        integrity="sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
     $(document).ready(function() {
         $('#table_id').DataTable();

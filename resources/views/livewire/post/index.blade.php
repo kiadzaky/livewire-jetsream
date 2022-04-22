@@ -9,7 +9,7 @@
                 class="text form-control">
         </div>
     </div>
-    <table class="table table-bordered" id="table_id">
+    <table class="table table-bordered" id="">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">TITLE</th>
