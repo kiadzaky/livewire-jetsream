@@ -8,10 +8,16 @@ use Livewire\WithPagination;
 class Index extends Component
 {
     use WithPagination;
+    public $search;
     public function render()
     {
         return view('livewire.post.index',[
-            'posts' => Post::latest()->paginate(10)
+            'posts' => $this->search === null ?
+                Post::latest()->paginate(10) :
+                Post::latest()
+                ->where('title', 'like', '%'.$this->search.'%')
+                ->orWhere('content', 'like', '%'.$this->search.'%')
+                ->paginate(10)
         ]);
     }
 
