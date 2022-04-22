@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel Livewire SPA - SantriKoding.com</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <livewire:styles />
-    <livewire:scripts />
+
 </head>
 
 <body>
@@ -33,8 +34,16 @@
     </div>
 
     <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#table_id').DataTable();
+    });
+    </script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js">
+    </script>
     <script src="{{ mix('js/app.js') }}"></script>
-
+    <livewire:scripts />
 </body>
 
 </html>
